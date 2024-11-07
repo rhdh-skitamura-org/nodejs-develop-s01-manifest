@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: nodejs-develop-s01
+  name: nodejs-develop-s01
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: nodejs-develop-s01
+  template:
+    metadata:
+      labels:
+        app: nodejs-develop-s01
+      annotations:
+        sidecar.istio.io/inject: "true"
+    spec:
+      containers:
+      - image: ___IMAGE_URL___@___IMAGE_DIGEST___
+        name: nodejs-develop-s01
+        ports:
+        - containerPort: 3000
+          protocol: TCP
+      serviceAccountName: nodejs-develop-s01-sa

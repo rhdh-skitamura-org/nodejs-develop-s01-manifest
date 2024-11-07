@@ -1,0 +1,14 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: webhook-nodejs-develop-s01-el 
+spec:
+  tls:
+    termination: edge
+  to:
+    kind: Service
+    name: el-nodejs-develop-s01-listener
+    weight: 100
+  port:
+    targetPort: http-listener
+  wildcardPolicy: None

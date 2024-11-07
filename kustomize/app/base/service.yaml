@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: nodejs-develop-s01
+  name: nodejs-develop-s01
+spec:
+  ports:
+  - name: 8080-tcp
+    port: 8080
+    protocol: TCP
+    targetPort: 3000
+  selector:
+    app: nodejs-develop-s01
+  type: ClusterIP
