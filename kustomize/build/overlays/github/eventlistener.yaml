@@ -20,4 +20,4 @@ spec:
             secretKey: webhook_secret
         - name: "eventTypes"
           #value: ["push"]
-          value: "!(body.commits.exists(c, c.modified.exists(f, f == 'catalog-info.yaml')))"
+          value: "!(body.commits.all(c, c.modified.all(f, f == 'catalog-info.yaml')))"
