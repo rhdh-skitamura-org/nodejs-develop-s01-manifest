@@ -19,5 +19,9 @@ spec:
             secretName: webhooksecret
             secretKey: webhook_secret
         - name: "eventTypes"
-          #value: ["push"]
-          value: "!(body.commits.all(c, c.modified.all(f, f == 'catalog-info.yaml')))"
+          value: ["push"]
+      - ref:
+          name: cel
+        params:
+          - name: filter
+            value: "!(body.commits.all(c, c.modified.all(f, f == 'catalog-info.yaml')))"
