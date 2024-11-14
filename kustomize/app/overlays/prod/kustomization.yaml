@@ -7,6 +7,6 @@ resources:
 namespace: nodejs-develop-s01-production
 
 images:
-- digest: sha256:b1ccdb063556d5601441d68c2033c61558284fd7cacf4d1994bf7763ea94954f
+- digest: sha256:a861c6e0d472e631dc31679473bd8911d66e9314a7d6db96140eb516d02d01ea
   name: ___IMAGE_URL___@___IMAGE_DIGEST___
   newName: quay-registry-quay-quay.apps.rosa.rosa-hcp-1544.kfnj.p3.openshiftapps.com/skitamura-quay-org/nodejs-develop-s01-develop/nodejs-develop-s01
