@@ -10,6 +10,6 @@ commonLabels:
 namespace: nodejs-develop-s01-develop
 
 images:
-- digest: sha256:ad8da833f57bb9bbb082492c5b4e4b358e72070430b92d9d6c81f88774fd8d86
+- digest: sha256:b1ccdb063556d5601441d68c2033c61558284fd7cacf4d1994bf7763ea94954f
   name: ___IMAGE_URL___@___IMAGE_DIGEST___
   newName: quay-registry-quay-quay.apps.rosa.rosa-hcp-1544.kfnj.p3.openshiftapps.com/skitamura-quay-org/nodejs-develop-s01-develop/nodejs-develop-s01
